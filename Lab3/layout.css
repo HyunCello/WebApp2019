@@ -1,0 +1,43 @@
+body{
+    background-image:url(blueTextureBG.jpg) ;
+    margin-left :10%;
+    margin-right:10%;
+}
+#boror{
+    font-size:14px;
+    color:#CCCCCC;
+}
+.borbl{
+    border : 4px solid #1D2475;
+    background: #99CCFF;
+    padding: 5px;
+    margin-top :10px;
+    border-radius: 15px;
+    overflow:hidden;
+}
+.borgr{
+    border : 10px solid white;
+    background: white;
+}
+.borrd{
+    
+    text-align: right;
+    color : white;
+    background : #1D2475;
+}
+.borpp{
+    border-bottom : 2px dashed blue;
+}
+h1,h2{
+    font-weight: bold;
+}
+img{
+    float: right;
+}
+.nofloat{
+    float:none;
+}
+aside{
+    float:left;
+    border : 10px solid black;
+}
