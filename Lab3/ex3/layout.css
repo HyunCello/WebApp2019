@@ -1,0 +1,45 @@
+body{
+    margin-right:15%;
+    margin-left:15%;
+    background-image: url(blueTextureBG.jpg);
+}
+
+.bogr{
+    text-align: center;
+    background-color: #8E8E8E;
+    color :white;
+    padding: 5px;
+}
+h2{
+    border-bottom : 3px dotted white;
+    text-align: center;
+    padding-bottom: 2px;
+}
+.boblu{
+    border : 10px dashed white;
+    background : white;
+}
+.boyl{
+    border : 4px solid #1D2475;
+    border-radius: 15px;
+    background : #6277C3;
+    color : #FFFFFF;
+    padding : 5px;
+    margin-top : 10px;
+    overflow: auto;
+}
+.bord{
+    
+    background : #8E8E8E;
+    color : white;
+    font-weight : bold;
+    padding: 5px;
+}
+
+.bopp{
+    float: left;
+    background : white;
+    color : black;
+    text-align: center;
+    margin : 5px;
+}
