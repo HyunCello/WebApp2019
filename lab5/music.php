@@ -13,34 +13,48 @@
 		
 		<!-- Ex 1: Number of Songs (Variables) -->
 		<p>
-			I love music.
-			I have 1234 total songs,
-			which is over 123 hours of music!
+			<?php
+			$song_count = 5678;
+			$number_of_hours_of_music = ((int)$song_count/10);
+			print "I love music.";
+			print "I have $song_count total songs,";
+			print "which is over $number_of_hours_of_music hours of music!"
+			?>
 		</p>
 
 		<!-- Ex 2: Top Music News (Loops) -->
 		<!-- Ex 3: Query Variable -->
 		<div class="section">
 			<h2>Billboard News</h2>
-		
+
 			<ol>
-			    <li><a href="https://www.billboard.com/archive/article/201910">2019-11</a></li>
-				<li><a href="https://www.billboard.com/archive/article/201910">2019-10</a></li>
-				<li><a href="https://www.billboard.com/archive/article/201909">2019-09</a></li>
-				<li><a href="https://www.billboard.com/archive/article/201908">2019-08</a></li>
-				<li><a href="https://www.billboard.com/archive/article/201907">2019-07</a></li>
+			<?php				
+				$newspages = 6;
+				if (isset($_GET["newspages"])) {
+					$newspages = 11-$_GET["newspages"];
+				}
+				for ($news_pages = 11; $news_pages >$newspages; $news_pages--){ 
+					if ($news_pages<10){
+						$news_pages = "0"."$news_pages";
+					}?>
+					<li><a href="https://www.billboard.com/archive/article/2019<?php print $news_pages ?>">2019-<?php print $news_pages ?></li>
+				<?php $news_pages = (int)$news_pages;} ?>
+				</a>
 			</ol>
 		</div>
-
+		
 		<!-- Ex 4: Favorite Artists (Arrays) -->
 		<!-- Ex 5: Favorite Artists from a File (Files) -->
 		<div class="section">
 			<h2>My Favorite Artists</h2>
-		
+			
 			<ol>
-				<li>Guns N' Roses</li>
-				<li>Green Day</li>
-				<li>Blink182</li>
+				<?php
+					$favorite_artists = array("Guns N' Roses", "Green Day", "Blink182", "Queen");
+					foreach (file("favorite.txt")/*$favorite_artists*/ as $artists){
+				?>
+				<li><a href="https://en.wikipedia.org/wiki/<?php print $artists ?>"><?php print $artists ?></a></li>
+				<?php } ?>
 			</ol>
 		</div>
 		
@@ -50,26 +64,28 @@
 			<h2>My Music and Playlists</h2>
 
 			<ul id="musiclist">
+			<?php
+				$song_list = glob("lab5/musicPHP/songs/*.mp3");
+				foreach($song_list as $mp3){
+				?>
+
 				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/paradise-city.mp3">paradise-city.mp3</a>
+					<a href=<?php print $mp3 ?>><?= basename($mp3)?> </a><span>(<?=(int) (filesize($mp3)/1024)?>KB)</span>
 				</li>
 				
-				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/basket-case.mp3">basket-case.mp3</a>
-				</li>
-
-				<li class="mp3item">
-					<a href="lab5/musicPHP/songs/all-the-small-things.mp3">all-the-small-things.mp3</a>
-				</li>
-
+				<?php } ?>
+				
 				<!-- Exercise 8: Playlists (Files) -->
 				<li class="playlistitem">326-13f-mix.m3u:
 					<ul>
+					<?php
+					?>
 						<li>Basket Case.mp3</li>
 						<li>All the Small Things.mp3</li>
 						<li>Just the Way You Are.mp3</li>
 						<li>Pradise City.mp3</li>
 						<li>Dreams.mp3</li>
+					
 					</ul>
 			</ul>
 		</div>
