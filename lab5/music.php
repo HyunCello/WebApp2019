@@ -76,17 +76,23 @@
 				<?php } ?>
 				
 				<!-- Exercise 8: Playlists (Files) -->
-				<li class="playlistitem">326-13f-mix.m3u:
-					<ul>
-					<?php
-					?>
-						<li>Basket Case.mp3</li>
-						<li>All the Small Things.mp3</li>
-						<li>Just the Way You Are.mp3</li>
-						<li>Pradise City.mp3</li>
-						<li>Dreams.mp3</li>
-					
-					</ul>
+				<?php
+					$playlist_m3u = glob("lab5/musicPHP/songs/*.m3u");
+					foreach($playlist_m3u as $playlist) { ?>
+						<li class="playlistitem"><?=basename($playlist)?>:
+						<?php 
+						$files = file($playlist);
+						foreach ($files as $file){?>
+							<ul>
+								<?php
+								$pos = stripos($file,"#");
+								if ($pos !== 0){ ?>
+								<li><?= $file ?> <?=stripos($file, "#")?></li>
+								<?php } ?>
+							
+							</ul>
+						<?php } ?>
+					<?php } ?>
 			</ul>
 		</div>
 
