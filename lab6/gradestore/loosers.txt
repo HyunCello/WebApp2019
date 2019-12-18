@@ -1,0 +1,32 @@
+;ID;CardNumber;
+asd;ID;CardNumber;
+asd;ID;CardNumber;
+asd;ID;CardNumber;
+;ID;CardNumber;
+;ID;CardNumber;
+asdad;ID;CardNumber;Visa
+asdad;ID;CardNumber;Visa
+asdad;ID;CardNumber;Visa
+asdad3;ID;CardNumber;Visa
+-;ID;CardNumber;Visa
+Name;ID;CardNumber;
+Name;ID;CardNumber;
+Name;ID;CardNumber;
+Name;ID;CardNumber;
+Name;ID;CardNumber;Visa
+Name;ID;CardNumber;Visa
+Name**&^&;ID;CardNumber;Visa
+Name-;ID;CardNumber;Visa
+Name-!;ID;CardNumber;Visa
+Name-!;ID;CardNumber;Visa
+-;ID;CardNumber;Visa
+ ;ID;CardNumber;Visa
+ !;ID;CardNumber;Visa
+ !;ID;CardNumber;Visa
+asdasd;ID;CardNumber;Visa
+!;ID;CardNumber;Visa
+!;ID;CardNumber;Visa
+dasd;ID;CardNumber;Visa
+KIM;14525245;CardNumber;Visa
+KIM;14525245;CardNumber;Visa
+sdfg;14525245;1616161616161616;Visa
